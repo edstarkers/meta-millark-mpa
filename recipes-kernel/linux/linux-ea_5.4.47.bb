@@ -7,13 +7,13 @@ The kernel is based on the kernel provided by NXP."
 
 require recipes-kernel/linux/linux-imx.inc
 
-SRC_URI = "git://github.com/edstarkers/rl256-imx-atf.git;protocol=git;branch=${SRCBRANCH}"
+SRC_URI = "git://github.com/embeddedartists/linux-imx.git;protocol=git;branch=${SRCBRANCH}"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 LOCALVERSION = "-2.2.0"
 SRCBRANCH = "ea_5.4.47"
-SRCREV = "c87c157cd4d78e89118a73005458c1de6b0aaad0"
+SRCREV = "ca870f01605d6e4c737e0f3cd04ada8140a3fbc5"
 DEPENDS += "lzop-native bc-native"
 
 DEFAULT_PREFERENCE = "1"
