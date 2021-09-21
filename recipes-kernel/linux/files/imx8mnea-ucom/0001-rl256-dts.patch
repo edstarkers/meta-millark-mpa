@@ -1,0 +1,95 @@
+--- ../../../RL256/ea-base/sources/meta-ea/imx8mn-ea-ucom-kit_v2.dts	2021-09-21 04:22:32.203557468 -0400
++++ arch/arm64/boot/dts/freescale/imx8mn-ea-ucom-kit_v2.dts	2021-09-20 14:39:21.879538945 -0400
+@@ -17,7 +17,7 @@
+ #include "imx8mn-ea-ucom.dtsi"
+ 
+ / {
+-	model = "Nixer RL256 v1.1";
++	model = "Embedded Artists i.MX8M Nano uCOM Kit";
+ 	compatible = "fsl,imx8mnea-ucom", "fsl,imx8mn";
+ 
+ 	chosen {
+@@ -62,7 +62,7 @@
+ 		/* add construct for "fmac" to control WL_REG_ON signal */
+ 		usdhc1_pwrseq: usdhc1_pwrseq {
+ 			compatible = "mmc-pwrseq-simple";
+-			reset-gpios = <&gpio2 11 GPIO_ACTIVE_LOW>; /* WL REG ON */
++			reset-gpios = <&gpio_buff 1 GPIO_ACTIVE_LOW>; /* WL REG ON */
+ 			post-power-on-delay-ms = <120>;
+ 			status = "okay";
+ 		};
+@@ -97,19 +97,6 @@
+ };
+ 
+ 
+-&gpio2 {
+-	
+-	sysstat@10 {
+-        gpio-hog;
+-        gpios = <10 GPIO_ACTIVE_HIGH>;
+-        output-high;
+-        line-name = "WL_ENABLE";
+-    };
+-    
+-};
+-
+-
+-
+ &clk {
+ 	assigned-clocks = <&clk IMX8MN_AUDIO_PLL1>, <&clk IMX8MN_AUDIO_PLL2>;
+ 	assigned-clock-rates = <393216000>, <361267200>;
+@@ -120,7 +107,6 @@
+ 	pinctrl-names = "default";
+ 
+ 	imx8mnea-ucom-kit {
+-		
+ 
+ 		pinctrl_mipi_dsi_en: mipi_dsi_en {
+ 			fsl,pins = <
+@@ -153,13 +139,6 @@
+ 				MX8MN_IOMUXC_UART2_TXD_UART2_DCE_TX	0x140
+ 			>;
+ 		};
+-		
+-		pinctrl_uart4: uart4grp {
+-			fsl,pins = <
+-			 	MX8MN_IOMUXC_UART4_RXD_UART4_DCE_RX 0x140
+-				MX8MN_IOMUXC_UART4_TXD_UART4_DCE_TX	0x140
+-			>;
+-		};
+ 
+ 		pinctrl_usdhc1_gpio: usdhc1grpgpio {
+ 			fsl,pins = <
+@@ -401,8 +380,7 @@
+ 	status = "okay";
+ };
+ 
+-
+-&uart1 { 
++&uart1 { /* Bluetooth UART */
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&pinctrl_uart1>;
+ 	status = "okay";
+@@ -414,7 +392,6 @@
+ 	fsl,uart-has-rtscts;
+ };
+ 
+-
+ &uart2 { /* Console */
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&pinctrl_uart2>;
+@@ -425,14 +402,6 @@
+ 	status = "disabled";
+ };
+ 
+-&uart4 { 
+-	pinctrl-names = "default";
+-	pinctrl-0 = <&pinctrl_uart4>;
+-	status = "okay";
+-
+-};
+-
+-
+ &usbotg1 {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&pinctrl_usbotg1>;
