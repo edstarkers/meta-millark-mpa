@@ -8,13 +8,13 @@ The kernel is based on the kernel provided by NXP."
 require recipes-kernel/linux/linux-imx.inc
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
-SRC_URI = "git://github.com/embeddedartists/linux-imx.git;protocol=git;branch=${SRCBRANCH}"
+SRC_URI = "git://github.com/edstarkers/linux-imx.git;protocol=git;branch=${SRCBRANCH}"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
 LOCALVERSION = "-2.2.0"
 SRCBRANCH = "ea_5.4.47"
-SRCREV = "ca870f01605d6e4c737e0f3cd04ada8140a3fbc5"
+SRCREV = "811deebe1e1e5c5b51f912d631b119292256b8f6"
 DEPENDS += "lzop-native bc-native"
 
 DEFAULT_PREFERENCE = "1"
