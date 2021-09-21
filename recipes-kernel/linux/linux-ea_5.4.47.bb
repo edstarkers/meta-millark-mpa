@@ -9,7 +9,7 @@ require recipes-kernel/linux/linux-imx.inc
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI = "git://github.com/embeddedartists/linux-imx.git;protocol=git;branch=${SRCBRANCH}"
-SRC_URI_append_imx8mnea-ucom = "file://0001-rl256-dts.patch"
+SRC_URI += = "file://0001-rl256-dts.patch"
 
 LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"
 
