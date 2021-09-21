@@ -6,6 +6,7 @@ DESCRIPTION = "Linux Kernel for Embedded Artists i.MX based COM boards. \
 The kernel is based on the kernel provided by NXP."
 
 require recipes-kernel/linux/linux-imx.inc
+FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 
 SRC_URI = "git://github.com/embeddedartists/linux-imx.git;protocol=git;branch=${SRCBRANCH}"
 SRC_URI_append_imx8mnea-ucom = "file://0001-rl256-dts.patch"
