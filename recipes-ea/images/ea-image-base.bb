@@ -23,10 +23,7 @@ IMAGE_INSTALL = "\
    python-pip \
    gdbserver \
    openssh-sftp-server \
-   sqlite3 \
    v4l-utils \
-   packagegroup-fsl-gstreamer1.0 \
-   packagegroup-fsl-gstreamer1.0-full \
    murata-binaries \
    backporttool-linux \
    kernel-modules-pcie8997 \
