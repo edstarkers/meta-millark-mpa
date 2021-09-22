@@ -14,4 +14,7 @@ do_compile_prepend() {
 	if [ -f ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/imx8mn-ea-ucom-kit_v2.dtb ]; then
 	  cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/imx8mn-ea-ucom-kit_v2.dtb ${S}/iMX8M/imx8mn-ddr4-evk.dtb
 	fi
+	if [ -f ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/imx8mn-rl256.dtb ]; then
+	  cp ${DEPLOY_DIR_IMAGE}/${BOOT_TOOLS}/imx8mn-rl256.dtb ${S}/iMX8M/imx8mn-ddr4-evk.dtb
+	fi
 }
