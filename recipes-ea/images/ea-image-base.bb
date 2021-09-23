@@ -17,7 +17,6 @@ IMAGE_INSTALL = "\
    fbida \
    wget \
    nano \
-   build-essential \
    python-subprocess \
    python-pyserial \
    python-argparse \
