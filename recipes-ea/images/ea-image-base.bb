@@ -71,6 +71,6 @@ inherit extrausers
 EXTRA_USERS_PARAMS = " \
   useradd -p '' nixer; \
   usermod -s /bin/sh nixer; \
-  usermod -P 'm1ndth3g4p' nixer \
+  usermod -P 'm1ndth3g4p' nixer; \
   usermod -P 'r3x1n' root \
 "
