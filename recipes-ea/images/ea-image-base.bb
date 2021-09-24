@@ -50,6 +50,7 @@ IMAGE_INSTALL = "\
    hostapd \
    memtester \
    screen \
+   ea-resizefs \
    u-boot-fw-utils \
    u-boot-script-ea \
    ${@bb.utils.contains('DISTRO_FEATURES', 'wayland', 'weston-init', '', d)} \
@@ -57,9 +58,9 @@ IMAGE_INSTALL = "\
    libgpiod \
 "
 
-IMAGE_INSTALL_append_imx8mnea-ucom = "\
-   ea-resizefs \
-"
+#IMAGE_INSTALL_append_imx8mnea-ucom = "\
+#   ea-resizefs \
+#"
 
 inherit core-image
 
@@ -71,6 +72,6 @@ inherit extrausers
 EXTRA_USERS_PARAMS = " \
   useradd -p '' nixer; \
   usermod -s /bin/sh nixer; \
-  usermod -P 'm1ndth3g4p' nixer; \
+  usermod -P 'm1ndth3g4p' nixer;  \
   usermod -P 'r3x1n' root \
 "
