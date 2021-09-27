@@ -1,7 +1,7 @@
 SUMMARY = "A console-only image that fully supports the target device \
 hardware."
 
-IMAGE_FEATURES += "splash ssh-server-openssh"
+IMAGE_FEATURES += "ssh-server-openssh"
 IMAGE_FEATURE_remove = "psplash"
 
 LICENSE = "MIT"
