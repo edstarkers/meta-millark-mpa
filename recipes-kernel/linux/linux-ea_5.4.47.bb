@@ -29,17 +29,17 @@ do_copy_defconfig () {
     install -d ${B}
 
 
-    #if [ ${DO_CONFIG_EA_IMX_COPY} = "yes" ]; then
-        ## copy latest ea_imx_defconfig to use
-        #mkdir -p ${B}
-        #cp ${S}/arch/arm/configs/ea_imx_defconfig ${B}/.config
-        #cp ${S}/arch/arm/configs/ea_imx_defconfig ${B}/../defconfig
-    #else
-        ## copy latest defconfig to use for mx8
-        #mkdir -p ${B}
-        #cp ${S}/arch/arm64/configs/ea_imx8_defconfig ${B}/.config
-        #cp ${S}/arch/arm64/configs/ea_imx8_defconfig ${B}/../defconfig
-    #fi
+    if [ ${DO_CONFIG_EA_IMX_COPY} = "yes" ]; then
+        # copy latest ea_imx_defconfig to use
+        mkdir -p ${B}
+        cp ${S}/arch/arm/configs/ea_imx_defconfig ${B}/.config
+        cp ${S}/arch/arm/configs/ea_imx_defconfig ${B}/../defconfig
+    else
+        # copy latest defconfig to use for mx8
+        mkdir -p ${B}
+        cp ${S}/arch/arm64/configs/ea_imx8_defconfig ${B}/.config
+        cp ${S}/arch/arm64/configs/ea_imx8_defconfig ${B}/../defconfig
+    fi
     
      mkdir -p ${B}
      cp ${S}/arch/arm64/configs/${MACHINE}_defconfig ${B}/.config
