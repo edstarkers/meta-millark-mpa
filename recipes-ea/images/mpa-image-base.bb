@@ -7,7 +7,7 @@ IMAGE_FEATURE_remove = "psplash"
 LICENSE = "MIT"
 
 IMAGE_INSTALL = "\
- 	${CORE_IMAGE_BASE_INSTALL} \
+   ${CORE_IMAGE_BASE_INSTALL} \
    i2c-tools-misc \
    i2c-tools \
    iproute2 \

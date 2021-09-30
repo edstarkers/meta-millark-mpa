@@ -15,6 +15,8 @@ IMAGE_INSTALL = "\
    alsa-utils \
    wget \
    nano \
+   picocom \
+   htop \
    python-subprocess \
    python-pyserial \
    python-argparse \
