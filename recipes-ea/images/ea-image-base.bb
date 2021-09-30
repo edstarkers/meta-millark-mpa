@@ -11,44 +11,22 @@ IMAGE_INSTALL = "\
    i2c-tools-misc \
    i2c-tools \
    pciutils \
-   can-utils \
    iproute2 \
-   evtest \
    alsa-utils \
-   fbida \
    wget \
    nano \
    python-subprocess \
    python-pyserial \
    python-argparse \
    python-pip \
-   gdbserver \
-   openssh-sftp-server \
-   v4l-utils \
-   murata-binaries \
-   backporttool-linux \
    kernel-modules-pcie8997 \
    linux-firmware-pcie8997 \
    kernel-modules-sdio8997 \
-   bluez5 \
-   bluez5-noinst-tools \
-   bluez5-obex \
-   openobex \
-   obexftp \
    glibc-gconv-utf-16 \
    glibc-utils \
-   cyw-supplicant \
    iperf3 \
-   tslib \
-   tslib-tests \
-   tslib-calibrate \
-   tslib-dev \
-   mtdev \
    ea-files \
    mmc-utils \
-   hostap-conf \
-   hostap-utils \
-   hostapd \
    memtester \
    screen \
    ea-resizefs \
@@ -71,8 +49,8 @@ inherit core-image
 # - For more options see extrausers.bbclass"
 inherit extrausers
 EXTRA_USERS_PARAMS = " \
-  useradd -p '' nixer; \
-  usermod -s /bin/sh nixer; \
-  usermod -P 'm1ndth3g4p' nixer;  \
-  usermod -P 'r3x1n' root \
+  #useradd -p '' millark; \
+  #usermod -s /bin/sh nixer; \
+  #usermod -P 'm1ndth3g4p' nixer;  \
+  usermod -P 'n01c4t4rr0' root \
 "
