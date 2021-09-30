@@ -41,9 +41,11 @@ do_copy_defconfig () {
         cp ${S}/arch/arm64/configs/ea_imx8_defconfig ${B}/../defconfig
     fi
     
-     mkdir -p ${B}
-     cp ${S}/arch/arm64/configs/${MACHINE}_defconfig ${B}/.config
-     cp ${S}/arch/arm64/configs/${MACHINE}_defconfig ${B}/../defconfig
+    if [ -f ${S}/arch/arm64/configs/${MACHINE}_defconfig ]; then
+     	mkdir -p ${B}
+     	cp ${S}/arch/arm64/configs/${MACHINE}_defconfig ${B}/.config
+     	cp ${S}/arch/arm64/configs/${MACHINE}_defconfig ${B}/../defconfig
+    fi
 
 }
 
