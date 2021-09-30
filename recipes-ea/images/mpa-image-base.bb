@@ -43,8 +43,5 @@ inherit core-image
 # - For more options see extrausers.bbclass"
 inherit extrausers
 EXTRA_USERS_PARAMS = " \
-  #useradd -p '' nixer; \
-  #usermod -s /bin/sh nixer; \
-  #usermod -P 'm1ndth3g4p' nixer;  \
   usermod -P 'n01c4t4rr0' root \
 "
