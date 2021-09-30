@@ -23,6 +23,7 @@ IMAGE_INSTALL = "\
    memtester \
    picocom \
    htop \
+   ea-files \
    ea-resizefs \
    u-boot-fw-utils \
    u-boot-script-ea \
