@@ -12,6 +12,10 @@ IMAGE_INSTALL = "\
    iproute2 \
    alsa-utils \
    wget \
+   python-subprocess \
+   python-pyserial \
+   python-argparse \
+   python-pip \
    nano \
    kernel-modules-pcie8997 \
    linux-firmware-pcie8997 \
