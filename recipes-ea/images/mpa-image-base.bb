@@ -17,6 +17,7 @@ IMAGE_INSTALL = "\
    python-pyserial \
    python-argparse \
    python-pip \
+   openssh-sftp-server \
    nano \
    kernel-modules-pcie8997 \
    linux-firmware-pcie8997 \
